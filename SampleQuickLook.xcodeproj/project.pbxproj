@@ -6,20 +6,97 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CC80CF131C7C30E3004D846A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80CF121C7C30E3004D846A /* AppDelegate.swift */; };
+		CC80CF151C7C30E3004D846A /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80CF141C7C30E3004D846A /* SampleViewController.swift */; };
+		CC80CF171C7C30E3004D846A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC80CF161C7C30E3004D846A /* Assets.xcassets */; };
+		CC80CF1A1C7C30E3004D846A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC80CF181C7C30E3004D846A /* Main.storyboard */; };
+		CC80CF201C7C355F004D846A /* SampleData in Resources */ = {isa = PBXBuildFile; fileRef = CC80CF1F1C7C355F004D846A /* SampleData */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC80CF0F1C7C30E3004D846A /* SampleQuickLook_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleQuickLook_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC80CF121C7C30E3004D846A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC80CF141C7C30E3004D846A /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		CC80CF161C7C30E3004D846A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC80CF191C7C30E3004D846A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC80CF1B1C7C30E3004D846A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC80CF1F1C7C355F004D846A /* SampleData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SampleData; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC80CF0C1C7C30E3004D846A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		CC80CF041C7C30B8004D846A = {
 			isa = PBXGroup;
 			children = (
+				CC80CF111C7C30E3004D846A /* SampleQuickLook_Mac */,
+				CC80CF101C7C30E3004D846A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		CC80CF101C7C30E3004D846A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC80CF0F1C7C30E3004D846A /* SampleQuickLook_Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC80CF111C7C30E3004D846A /* SampleQuickLook_Mac */ = {
+			isa = PBXGroup;
+			children = (
+				CC80CF1F1C7C355F004D846A /* SampleData */,
+				CC80CF121C7C30E3004D846A /* AppDelegate.swift */,
+				CC80CF141C7C30E3004D846A /* SampleViewController.swift */,
+				CC80CF161C7C30E3004D846A /* Assets.xcassets */,
+				CC80CF181C7C30E3004D846A /* Main.storyboard */,
+				CC80CF1B1C7C30E3004D846A /* Info.plist */,
+			);
+			path = SampleQuickLook_Mac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC80CF0E1C7C30E3004D846A /* SampleQuickLook_Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC80CF1C1C7C30E3004D846A /* Build configuration list for PBXNativeTarget "SampleQuickLook_Mac" */;
+			buildPhases = (
+				CC80CF0B1C7C30E3004D846A /* Sources */,
+				CC80CF0C1C7C30E3004D846A /* Frameworks */,
+				CC80CF0D1C7C30E3004D846A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleQuickLook_Mac;
+			productName = SampleQuickLook_Mac;
+			productReference = CC80CF0F1C7C30E3004D846A /* SampleQuickLook_Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CC80CF051C7C30B8004D846A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					CC80CF0E1C7C30E3004D846A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
 			};
 			buildConfigurationList = CC80CF081C7C30B8004D846A /* Build configuration list for PBXProject "SampleQuickLook" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -27,14 +104,53 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CC80CF041C7C30B8004D846A;
+			productRefGroup = CC80CF101C7C30E3004D846A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				CC80CF0E1C7C30E3004D846A /* SampleQuickLook_Mac */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC80CF0D1C7C30E3004D846A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC80CF171C7C30E3004D846A /* Assets.xcassets in Resources */,
+				CC80CF201C7C355F004D846A /* SampleData in Resources */,
+				CC80CF1A1C7C30E3004D846A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC80CF0B1C7C30E3004D846A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC80CF151C7C30E3004D846A /* SampleViewController.swift in Sources */,
+				CC80CF131C7C30E3004D846A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC80CF181C7C30E3004D846A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC80CF191C7C30E3004D846A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CC80CF091C7C30B8004D846A /* Debug */ = {
@@ -49,6 +165,98 @@
 			};
 			name = Release;
 		};
+		CC80CF1D1C7C30E3004D846A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SampleQuickLook_Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.SampleQuickLook-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC80CF1E1C7C30E3004D846A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SampleQuickLook_Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.SampleQuickLook-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -60,6 +268,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CC80CF1C1C7C30E3004D846A /* Build configuration list for PBXNativeTarget "SampleQuickLook_Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC80CF1D1C7C30E3004D846A /* Debug */,
+				CC80CF1E1C7C30E3004D846A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
