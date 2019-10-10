@@ -1,9 +1,9 @@
 //
-//  AppDelegate.swift
-//  SampleQuickLook_Mac
+//	AppDelegate.swift
+//	SampleQuickLook_Mac
 //
-//  Created by Kaz Yoshikawa on 2/23/16.
-//
+//	Created by Kaz Yoshikawa on 2/23/16.
+//	Copyright (c) Kaz Yoshikawa, All rights reserved.
 //
 
 import Cocoa

@@ -3,7 +3,7 @@
 //	SampleQuickLook_Mac
 //
 //	Created by Kaz Yoshikawa on 2/23/16.
-//
+//	Copyright (c) Kaz Yoshikawa, All rights reserved.
 //
 
 import Cocoa
@@ -46,7 +46,7 @@ class SampleViewController: NSViewController, NSTableViewDataSource, NSTableView
 		self.previewView = QLPreviewView(frame: self.rightView.bounds, style: .compact) // .Normal, .Compact
 		self.rightView.addSubview(previewView)
 
-		let views = ["previewView": self.previewView]
+		let views = ["previewView": self.previewView!]
 		for constraint in
 			NSLayoutConstraint.constraints(withVisualFormat: "V:|-[previewView]-|", options: [], metrics: nil, views: views) +
 			NSLayoutConstraint.constraints(withVisualFormat: "H:|-[previewView]-|", options: [], metrics: nil, views: views) {
