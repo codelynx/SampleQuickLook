@@ -11,9 +11,9 @@ import Quartz
 
 
 class SamplePreviewItem: NSObject, QLPreviewItem {
-	var previewItemURL: NSURL
+	var previewItemURL: URL
 	var previewItemTitle: String
-	init(URL: NSURL, title: String) {
+	init(URL: Foundation.URL, title: String) {
 		self.previewItemURL = URL
 		self.previewItemTitle = title
 	}
@@ -26,13 +26,13 @@ class SampleViewController: NSViewController, NSTableViewDataSource, NSTableView
 	var previewView: QLPreviewView!
 
 	lazy var previewItems: [SamplePreviewItem] = {
-		let directory = (NSBundle.mainBundle().resourcePath! as NSString).stringByAppendingPathComponent("SampleData")
+		let directory = (Bundle.main.resourcePath! as NSString).appendingPathComponent("SampleData")
 		var items = [SamplePreviewItem]()
-		if let files = NSFileManager.defaultManager().enumeratorAtPath(directory) {
+		if let files = FileManager.default.enumerator(atPath: directory) {
 			for file in files {
-				let filePath = (directory as NSString).stringByAppendingPathComponent(file as! String)
-				let fileURL = NSURL(fileURLWithPath: filePath)
-				let item = SamplePreviewItem(URL: fileURL, title: file.lastPathComponent)
+				let filePath = (directory as NSString).appendingPathComponent(file as! String)
+				let fileURL = URL(fileURLWithPath: filePath)
+				let item = SamplePreviewItem(URL: fileURL, title: (file as AnyObject).lastPathComponent)
 				items.append(item)
 			}
 		}
@@ -43,35 +43,35 @@ class SampleViewController: NSViewController, NSTableViewDataSource, NSTableView
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		self.previewView = QLPreviewView(frame: self.rightView.bounds, style: .Compact) // .Normal, .Compact
+		self.previewView = QLPreviewView(frame: self.rightView.bounds, style: .compact) // .Normal, .Compact
 		self.rightView.addSubview(previewView)
 
 		let views = ["previewView": self.previewView]
 		for constraint in
-			NSLayoutConstraint.constraintsWithVisualFormat("V:|-[previewView]-|", options: [], metrics: nil, views: views) +
-			NSLayoutConstraint.constraintsWithVisualFormat("H:|-[previewView]-|", options: [], metrics: nil, views: views) {
+			NSLayoutConstraint.constraints(withVisualFormat: "V:|-[previewView]-|", options: [], metrics: nil, views: views) +
+			NSLayoutConstraint.constraints(withVisualFormat: "H:|-[previewView]-|", options: [], metrics: nil, views: views) {
 			self.rightView.addConstraint(constraint)
 		}
 		self.previewView.translatesAutoresizingMaskIntoConstraints = false
 	}
 
-	override var representedObject: AnyObject? {
+	override var representedObject: Any? {
 		didSet {
 		}
 	}
 
-	func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+	func numberOfRows(in tableView: NSTableView) -> Int {
 		return previewItems.count
 	}
 	
-	func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-		switch tableColumn!.identifier {
+	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+		switch tableColumn!.identifier.rawValue {
 		case "title": return self.previewItems[row].previewItemTitle
 		default: return ""
 		}
 	}
 
-	func tableViewSelectionDidChange(notification: NSNotification) {
+	func tableViewSelectionDidChange(_ notification: Notification) {
 		if self.tableView.selectedRow >= 0 {
 			let previewItem = self.previewItems[self.tableView.selectedRow]
 			self.previewView.previewItem = previewItem
